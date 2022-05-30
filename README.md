@@ -1,6 +1,6 @@
 ## 🔥Clone do Tinder🔥
 
-![image](image.png)
+![image](http://127.0.0.1:5500/)
 
 ## 💻 Projeto
 Projeto para treino das habilidades em HTML e CSS, proposto durante o curso de formação para Desenvolvedor Web FullStack Jr do programa GoDev da [ImãLearningPlace](https://imalearningplace.com/).

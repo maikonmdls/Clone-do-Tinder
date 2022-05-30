@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #f5f3fa;
+    --icon-color: #dedfe4;
+
+    --fire-color: #fe1899;
+
+    --x-color: #050505;
+    --star-color: #2db1ee;
+    --heart-color: #e51a1a;
+
+    font-size: 60.5%; /* 1rem = 10px */
+
+    --nav-height: 5rem;
+}
+body {
+    background: var(--primary-color);
+    height: 100vh;
+    width: 100%;
+
+    font-family: 'Times New Romman', sans-serif;
+}
+
+/****** NavBar ******/
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px 0;
+    height: var(--nav-height);
+}
+
+.navbar i {
+    font-size: 3rem;
+    color: var(--icon-color);
+    transition: transform 500ms ease;
+}
+
+.navbar i:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.navbar i:nth-child(1) {
+    color: var(--fire-color);
+}
+
+/*** Photo ***/
+
+.photo-and-actions {
+    height: calc(100vh - var(--nav-height));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo {
+    width: 98vw;
+    height: 85vh;
+    background: url('./assets/imagen.jpg')center center/cover;
+    border-radius: 1rem;
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+    box-shadow: 0 3px 10px 0 rgba(130, 133, 133, 0.78);
+}
+
+.photo-text {
+    padding: 5rem;
+    border-radius: 2rem;
+
+    background: rgb(2, 0, 35);
+    background: rgb(2, 0, 34);
+    background: linear-gradient(
+        181deg,
+        rgb(255, 255, 255) 0%,
+        rgba(247, 247, 247, 0) 0%,
+        rgba(0, 0, 0, 0.7) 52%
+    );
+}
+
+.photo-name-and-age {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.photo-name-and-age h2 {
+    font-size: 2rem;
+}
+
+.photo-name-and-age h2:nth-child(1) {
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+.photo-bio {
+    line-height: 2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+/**** Actions ****/
+
+.actions {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.action {
+    height: 6rem;
+    width: 6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #cef;
+    box-shadow: 0 2px 6px 0 rgba(110, 126, 132, 0.15);
+    border-radius: 50%;
+
+    font-size: 3rem;
+
+    transition: transform 500ms ease;
+}
+
+.action:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.actions .action:nth-child(2) {
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: var(--star-color);
+}
+
+.actions .action:nth-child(3) {
+    color: var(--heart-color);
+}
+
+/**** Desktop ****/
+/*** 1025px or more ***/
+@media (min-width: 1025px) {
+    .photo {
+        width: 36.7rem;
+        height: 68.4rem;
+    }
+
+    .actions {
+        flex: initial;
+    }
+
+    .photo-and-actions {
+        justify-content: center;
+    }
+
+    .navbar {
+        width: 40rem;
+        margin: auto;
+    }
+}
